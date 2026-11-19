@@ -2,9 +2,12 @@
 
 . ./config.sh
 
-${kubectl_cmd} delete cluster ${cluster_name}
-${kubectl_cmd} delete cluster ${cluster_restore}
-${kubectl_cmd} delete namespace ${namespace}
+${kubectl_cmd} delete clusters.postgresql.k8s.enterprisedb.io ${cluster_name}
+${kubectl_cmd} delete clusters.postgresql.k8s.enterprisedb.io ${cluster_restore}
+${kubectl_cmd} delete clusters.postgresql.k8s.enterprisedb.io ${cluster_name}-major
+${kubectl_cmd} delete project ${namespace}
+${kubectl_cmd} delete devworkspace enterprisedb-workshop
+
 
 print_info "======================================================\n"
 print_info "Your demo environment has been deleted.\n"

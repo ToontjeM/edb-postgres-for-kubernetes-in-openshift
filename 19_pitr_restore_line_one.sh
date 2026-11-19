@@ -71,7 +71,7 @@ EOF
 fi
 
 print_info "Deleting cluster-restore cluster\n"
-${kubectl_cmd} delete cluster ${cluster_restore}
+${kubectl_cmd} delete clusters.postgresql.k8s.enterprisedb.io ${cluster_restore}
 sleep 5
 ${kubectl_cmd} exec -it ${primary} -- psql -U postgres -c "select pg_switch_wal();"
 sleep 5

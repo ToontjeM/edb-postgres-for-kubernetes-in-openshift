@@ -7,7 +7,7 @@ if [ ! -d $HOME/.local/bin ]; then
 fi
 
 print_command "https://github.com/EnterpriseDB/kubectl-cnp/raw/main/install.sh | \
-  sh -s -- -b /usr/local/bin\n"
+  sh -s -- -b $HOME/.local/bin\n"
 
 curl -sSfL \
   https://github.com/EnterpriseDB/kubectl-cnp/raw/main/install.sh | \

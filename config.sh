@@ -30,8 +30,8 @@ export cluster_restore="cluster-restore-${id}"
 export postgres_instances=3
 export postgres_cpu="0.5"
 export postgres_memory="512Mi"
-export postgres_storage="512Mi"
-export postgres_wal_storage="512Mi"
+export postgres_storage="1024Mi"
+export postgres_wal_storage="1024Mi"
 
 # (Deprecated) Quay.io repository
 #export postgres_default_image="quay.io/enterprisedb/postgresql:16.2-multiarch"
